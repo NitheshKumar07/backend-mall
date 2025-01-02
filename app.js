@@ -44,9 +44,9 @@
 // ..........................................................................................
 const express = require('express');
 const app = express();
-const productRoute = require('./routes/product');
-const userRoute = require('./routes/user');
-const categorypath = require('./routes/category');
+const productRoute = require('./api/routes/product');
+const userRoute = require('./api/routes/user');
+const categorypath = require('./api/routes/category');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const { urlencoded, json } = require('body-parser');
