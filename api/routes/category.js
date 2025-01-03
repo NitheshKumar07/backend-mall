@@ -11,7 +11,7 @@ cloudinary.config({
     api_secret:'eKWEzhcDTRgAH9MJDmszQqAX8JQ'
   });
 
-router.get('/',checkAuth,(req,res,next)=>{
+router.get('/',(req,res,next)=>{
     Category.find()
     .select(' _id name photo')
     .then(result=>{
@@ -28,7 +28,7 @@ router.get('/',checkAuth,(req,res,next)=>{
 })
 
 // save category
-router.post('/',checkAuth,(req,res,next)=>{
+router.post('/',(req,res,next)=>{
     console.log(req);
     console.log(req.files);
     const file = req.files.photo;
