@@ -81,7 +81,7 @@ app.use(
 // Configure CORS
 const allowedOrigins = [
   'http://localhost:3000', // Local development
-  'https://mall-vert.vercel.app/', // Deployed frontend domain
+  'https://shop-mall-omega.vercel.app/', // Deployed frontend domain
 ];
 
 app.use(
