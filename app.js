@@ -84,15 +84,21 @@ const allowedOrigins = [
   'https://shop-mall-omega.vercel.app', // Deployed frontend domain
 ];
 
+// app.use(
+//   cors({
+//     origin: function (origin, callback) {
+//       if (!origin || allowedOrigins.includes(origin)) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error('Not allowed by CORS'));
+//       }
+//     },
+//   })
+// );
+
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
-    },
+    origin: '*', // Allow all origins
   })
 );
 
