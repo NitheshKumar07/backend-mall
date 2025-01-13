@@ -79,10 +79,10 @@ app.use(
 );
 
 // Configure CORS
-const allowedOrigins = [
-  'http://localhost:3000', // Local development
-  'https://shop-mall-omega.vercel.app', // Deployed frontend domain
-];
+// const allowedOrigins = [
+//   'http://localhost:3000', // Local development
+//   'https://shop-mall-omega.vercel.app', // Deployed frontend domain
+// ];
 
 // app.use(
 //   cors({
@@ -98,9 +98,18 @@ const allowedOrigins = [
 
 app.use(
   cors({
-    origin: '*', // Allow all origins
+    origin: [
+      'http://localhost:3000',
+      'http://localhost:3001',
+      'https://shop-mall-omega.vercel.app',
+    ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Authorization', 'Content-Type'],
+    credentials: true, // Allow credentials if necessary
   })
 );
+
+
 
 // Routes
 app.use('/product', productRoute);
