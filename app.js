@@ -93,6 +93,8 @@ app.use(
         callback(new Error('Not allowed by CORS'));
       }
     },
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
+    credentials: true, // If cookies/auth headers are needed
   })
 );
 
