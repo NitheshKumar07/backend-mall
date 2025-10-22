@@ -96,19 +96,21 @@ app.use(
 //   })
 // );
 
-app.use(
-  cors({
-    origin: [
-      'http://localhost:3000',
-      'http://localhost:3001',
-      'https://shop-mall-omega.vercel.app',
-      'http://3.110.113.45:80',
-    ],
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Authorization', 'Content-Type'],
-    credentials: true, // Allow credentials if necessary
-  })
-);
+// app.use(
+//   cors({
+//     origin: [
+//       'http://localhost:3000',
+//       'http://localhost:3001',
+//       'https://shop-mall-omega.vercel.app',
+//       'http://3.110.113.45:80',
+//     ],
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//     allowedHeaders: ['Authorization', 'Content-Type'],
+//     credentials: true, // Allow credentials if necessary
+//   })
+// );
+
+app.use(cors({ origin: "*" }));
 
 
 
