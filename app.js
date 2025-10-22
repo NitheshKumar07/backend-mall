@@ -102,6 +102,7 @@ app.use(
       'http://localhost:3000',
       'http://localhost:3001',
       'https://shop-mall-omega.vercel.app',
+      'http://3.110.113.45:80',
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Authorization', 'Content-Type'],
